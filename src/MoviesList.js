@@ -29,7 +29,14 @@ class MoviesList extends React.Component {
       return (
         moviesList.map((movie) => {
           return (
-            <p>{movie.title}</p>
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">{movie.id}</h5>
+                <h6 class="card-subtitle mb-2 text-muted">{movie.title}</h6>
+                {/* <p>{movie.title}</p> */}
+              </div>
+            </div>
+            //  <p>{movie.title}</p>
            )
          })
       )
