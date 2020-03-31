@@ -1,4 +1,8 @@
 import React from 'react';
+// import { Container, Row, Col } from 'react';
+import Container from 'react-bootstrap/Container'
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
 
 class MoviesList extends React.Component {
     constructor(props) {
@@ -25,18 +29,14 @@ class MoviesList extends React.Component {
 
     renderMoviesList() {
       var moviesList = this.state.moviesList;
-
       return (
-        moviesList.map((movie) => {
-          return (
-            <div class="card">
-              <div class="card-body">
-                <h5 class="card-title">{movie.id}</h5>
-                <h6 class="card-subtitle mb-2 text-muted">{movie.title}</h6>
-              </div>
-            </div>
-           )
-         })
+        <Container>
+          <Row>
+            {(moviesList).map(movie =>
+              <Col xs={4} key={movie.id}>{movie.title}</Col>
+            )}
+          </Row>
+        </Container>
       )
     }
 
@@ -45,7 +45,7 @@ class MoviesList extends React.Component {
         <div>
           <center><h1>Movie List</h1></center>
           {this.renderMoviesList()}
-         </div>
+        </div>
       )    
     }
 }
