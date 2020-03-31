@@ -33,10 +33,8 @@ class MoviesList extends React.Component {
               <div class="card-body">
                 <h5 class="card-title">{movie.id}</h5>
                 <h6 class="card-subtitle mb-2 text-muted">{movie.title}</h6>
-                {/* <p>{movie.title}</p> */}
               </div>
             </div>
-            //  <p>{movie.title}</p>
            )
          })
       )
